@@ -9,10 +9,12 @@
 <body>
 
     <header>
-        <img src="https://via.placeholder.com/150x50?text=Easy+Soccer+Logo" alt="Easy Soccer Logo">
+        <figure>
+            <img src="./assets/download.jpeg" alt="Easy Soccer Logo"> 
+        </figure>
         <nav>
         <a href="#features">Características</a>
-        <a href="#about">Acerca de</a>
+        <a href="#pricing">Precios</a>
         <a href="#contact">Contacto</a>
         </nav>
     </header>
@@ -24,30 +26,86 @@
         <p>Transforma la administración de tus canchas y facilita las reservas con Easy Soccer</p>
         </div>
     </section>
-
-    <section id="features" class="content">
-        <h3>Características Principales</h3>
-        <div class="features">
-            <div class="feature">
-                <img src="https://images.unsplash.com/photo-1596495577886-d920f732ad4c" alt="Automatización Completa">
-                <h4>Automatización Completa</h4>
-                <p>Organiza horarios y gestiona reservas automáticamente para optimizar tu negocio.</p>
+    <section class="features-container">
+        <h2>Caracteristicas Principales</h2>
+        <section class="features-section">
+            <div class="feature-card">
+                <h3>Interfaz Amigable</h3>
+                <p>Una plataforma diseñada para que dueños de canchas administren todo sin complicaciones.</p>
             </div>
-            <div class="feature">
-                <img src="https://images.unsplash.com/photo-1586281380381-5c26d5a1fa0c" alt="Reserva vía WhatsApp">
-                <h4>Reserva vía WhatsApp</h4>
-                <p>Permite a los clientes reservar fácilmente mediante un bot de WhatsApp intuitivo.</p>
+            <div class="feature-card">
+                <h3>Automatización Completa</h3>
+                <p>Gestiona horarios, disponibilidad y reservas de manera sencilla y automática.</p>
             </div>
-            <div class="feature">
-                <img src="https://images.unsplash.com/photo-1563902249919-7f8b94d8b9e7" alt="Interfaz Amigable">
-                <h4>Interfaz Amigable</h4>
-                <p>Disfruta de una plataforma accesible y fácil de usar para una administración sin esfuerzo.</p>
+            <div class="feature-card">
+                <h3>Acceso 24/7</h3>
+                <p>Disponibles en todo momento para atender tus necesidades y brindarte el mejor servicio.</p>
             </div>
+            <div class="feature-card">
+                <div class="feature-card-overlay"></div>
+                <h3>Reserva vía WhatsApp</h3>
+                <p>Permite a tus clientes reservar canchas rápidamente a través de nuestro bot de WhatsApp.</p>
+            </div>
+            <div class="feature-card">
+                <h3>$3000+ Ahorrados</h3>
+                <p>Optimizando el tiempo y recursos en administración.</p>
+            </div>
+        </section>
+    </section>
+    <section id="pricing" class="content">
+        <h3>Planes de Precios</h3>
+        <div class="pricing-plans">
+        <div class="pricing-plan">
+            <h4>Plan Básico</h4>
+            <p>$50000 / mes</p>
+            <ul>
+                <li>Administracion de maximo 2 canchas</li>
+                <li>Estadisticas del negocio</li>
+            </ul>
+            <button>Contratar Plan</button>
+        </div>
+        <div class="pricing-plan">
+            <h4>Plan Medio</h4>
+            <p>$70000 / mes</p>
+            <ul>
+                <li>Administracion de maximo 4 canchas</li>
+                <li>Estadisticas del negocio</li>
+            </ul>
+            <button>Contratar Plan</button>
+        </div>
+        <div class="pricing-plan">
+            <h4>Plan Premium</h4>
+            <p>$100000 / mes</p>
+            <ul>
+                <li>Canchas ilimitadas</li>
+                <li>Estadisticas del negocio</li>
+            </ul>
+            <button>Contratar Plan</button>
+        </div>
         </div>
     </section>
 
-    <section class="cta">
-        <button>Empieza ahora con Easy Soccer</button>
+    <section id="contact" class="form-section">
+        <h3>¿Interesado? Déjanos tu Información</h3>
+        <form action="#" method="post">
+        <div class="form-group">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Teléfono:</label>
+            <input type="tel" id="phone" name="phone">
+        </div>
+        <div class="form-group">
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" rows="4" placeholder="Dinos qué necesitas..."></textarea>
+        </div>
+        <button type="submit">Enviar Información</button>
+        </form>
     </section>
 
     <footer>

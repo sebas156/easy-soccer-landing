@@ -3,40 +3,56 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
-  }
+    
+}
 
-  body {
+html{
+    scroll-behavior: smooth;
+}
+
+body {
     background-color: #f4f4f9;
     color: #333;
     line-height: 1.6;
-  }
+}
 
-  header {
+header {
     background-color: #212529;
     padding: 1rem 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     color: #fff;
-  }
+}
 
-  header img {
-    width: 150px;
-  }
+header figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    overflow: hidden;
+}
 
-  header nav a {
+header img {
+    width: 100%;
+    height: 100%;
+}
+
+header nav a {
     color: #fff;
     text-decoration: none;
     margin: 0 1rem;
     font-size: 1rem;
-  }
+}
 
-  header nav a:hover {
+header nav a:hover {
     color: #28a745;
-  }
+}
 
-  .hero {
-    background: url('https://images.unsplash.com/photo-1602016753659-7c3f9469c7d6') no-repeat center center/cover;
+.hero {
+    background: url('./assets/background.jpg') no-repeat center center/cover;
     height: 70vh;
     display: flex;
     align-items: center;
@@ -45,53 +61,166 @@
     text-align: center;
     padding: 2rem;
     position: relative;
-  }
+}
 
-  .hero-overlay {
+.hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-  }
+    background: rgba(0, 0, 0, 0.25);
+}
 
-  .hero-content {
+.hero-content {
     z-index: 1;
     max-width: 600px;
-  }
+}
 
-  .hero h2 {
+.hero h2 {
     font-size: 3rem;
     margin-bottom: 1rem;
-  }
+}
 
-  .hero p {
+.hero p {
     font-size: 1.2rem;
-  }
+}
 
-  .content {
+.features-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.features-container > h2{
+    color: #28a745;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.features-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3,1fr);
+    gap: 15px;
+    max-width: 1200px;
+    height: 700px;
+    padding: 20px;
+}
+
+.feature-card {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #ffffff;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+}
+
+.feature-card h3,
+.feature-card p {
+    margin: 0;
+    color: white;
+    z-index: 1;
+}
+
+.feature-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+.feature-card:nth-child(1) {
+    background-image: url('./assets/ui.webp');
+    grid-area: 2/1/4/2;
+}
+
+.feature-card:nth-child(2) {
+    background-image: url('./assets/automated-process.webp');
+    grid-area: 1/2/4/3;
+}
+
+.feature-card:nth-child(2) h3 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.feature-card:nth-child(3) {
+    background-color: #28a745;
+}
+
+.feature-card:nth-child(3) h3 {
+    font-size: 30px;
+}
+
+
+.feature-card:nth-child(4) {
+    background-image: url('./assets/wpp-bot.webp');
+    grid-area: 1/3/3/4;
+}
+
+.feature-card:nth-child(4) h3 {
+    font-size: 25px;
+    
+}
+
+.feature-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.feature-card:nth-child(5) {
+    background-color: #212529;
+    justify-content: space-evenly; 
+    grid-area: 1/1/2/2;
+}
+
+.feature-card:nth-child(5) h3 {
+    font-size: 30px;
+}
+
+.content {
     padding: 2rem;
     max-width: 1200px;
     margin: auto;
     text-align: center;
-  }
+}
 
-  .content h3 {
+.content h3 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     color: #28a745;
-  }
+}
 
-  .features {
+.pricing-plans {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
     justify-content: space-between;
     margin-top: 2rem;
-  }
+}
 
-  .feature {
+.pricing-plan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     flex: 1 1 300px;
     padding: 2rem;
     background-color: #fff;
@@ -99,31 +228,46 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s;
-  }
+}
 
-  .feature:hover {
+.pricing-plan:hover {
     transform: translateY(-10px);
-  }
+}
 
-  .feature img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-  }
-
-  .feature h4 {
+.pricing-plan h4 {
     font-size: 1.6rem;
-    margin-bottom: 0.5rem;
     color: #28a745;
-  }
+    margin-bottom: 0.5rem;
+}
 
-  .cta {
+.pricing-plan p {
+    margin: 1rem 0;
+}
+
+.pricing-plan ul {
+    width: 80%;
+}
+
+.pricing-plan button {
+    background-color: #28a745;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.pricing-plan button:hover {
+    background-color: #218838;
+}
+
+.cta {
     text-align: center;
     margin: 2rem 0;
-  }
+}
 
-  .cta button {
+.cta button {
     background-color: #28a745;
     color: #fff;
     padding: 1rem 3rem;
@@ -132,27 +276,64 @@
     border-radius: 50px;
     cursor: pointer;
     transition: background-color 0.3s;
-  }
+}
 
-  .cta button:hover {
+.cta button:hover {
     background-color: #218838;
-  }
+}
 
-  footer {
+.form-section {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+.form-section h3 {
+    margin-bottom: 1rem;
+    color: #28a745;
+}
+
+.form-section form{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.form-section form button {
+    margin: auto;
+    background-color: #28a745;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+footer {
     background-color: #212529;
     color: #fff;
     text-align: center;
     padding: 1.5rem 0;
     font-size: 0.9rem;
-  }
-
-  @media (max-width: 768px) {
-    .hero h2 {
-      font-size: 2rem;
-    }
-
-    .features {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
+}
